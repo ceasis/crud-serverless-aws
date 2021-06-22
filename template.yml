@@ -1,0 +1,28 @@
+Description: Invoke CloudFormation Via AWS Lambda
+Resources:
+  CreateMessage:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.apps.rh.CreateMessageRH::handleRequest
+      Runtime: java8
+      MemorySize: 1000
+      CodeUri: "../crudform-serverless-aws"
+      Timeout: 60
+
+  DeleteMessage:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.apps.rh.DeleteMessageRH::handleRequest
+      Runtime: java8
+      MemorySize: 1000
+      CodeUri: "../crudform-serverless-aws"
+      Timeout: 60
+
+  ReadMessage:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.apps.rh.ReadMessageRH::handleRequest
+      Runtime: java8
+      MemorySize: 1000
+      CodeUri: "../crudform-serverless-aws"
+      Timeout: 60

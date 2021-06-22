@@ -1,0 +1,149 @@
+<html>
+<head>
+
+<script id="message" type="text/x-jsrender">
+
+<div class="col-lg-12 pt-2 messageDiv" style="border-top: 1px solid #ddd;">
+<div class="float-right mt-2">
+	<div mid="{{:messageId}}" class="btn btn-danger deleteMessage"><i class="fa fa-trash"></i>
+	</div>
+</div>
+<div class=""><strong>From: {{:name}}</strong></div>
+<div class="">Message: {{:message}}</div>
+<div class="text-muted">ref: {{:messageId}}</div>
+</div>
+
+</script>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.11/jsrender.min.js" integrity="sha512-bKlNlbTH3duwZ28zoqEhXui/yuaPuQVci6OAVu0zh2WfYbEKD39HszVR8byP4/L4YyBo3b5CGIY+4ldVN93uCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    
+<script type="text/javascript">
+
+function getMessages() {
+
+	var messageTemplate = $.templates("#message");
+    
+	$.get('https://www.crudform.com/message', function(data) {
+	    $('#list').empty();
+	    
+	    $.each(data, function(index, message) {
+                html = messageTemplate.render(message);
+                $("#list").append(html);
+        });
+        
+    });
+}
+
+function deleteMessage() {
+    
+}
+    
+$(document).ready(function() {
+    getMessages();
+    
+	$(document).on("click", "#sendMessage", function() {
+	    console.log("sending message");
+        
+        form = $(this).closest('form');
+        
+        message = $('#text').val();
+        name    = $('#name').val();
+        
+        link = "https://www.crudform.com/message";
+      
+        $.ajax({
+            url: link,
+            contentType: "application/json",
+            type: 'POST',
+            data: JSON.stringify({
+                'NAME' : name,
+                'MESSAGE' : message
+            }),
+            success: function(result){
+            	console.log(result);
+            	$('#form-id').trigger("reset");
+            	getMessages();
+            }
+        });
+	});  
+    
+	$(document).on("click", ".deleteMessage", function() {
+        form = $(this).closest('form');
+        
+        mid = $(this).attr("mid");
+                
+        $.ajax({
+            url: "https://www.crudform.com/message/" + mid,
+            type: 'DELETE',           
+            success: function(result) {
+                console.log(result);
+            }
+        }); 
+        
+        $(this).parent().parent().hide();
+	});      
+});
+    
+</script>    
+    
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+<title>CrudForm</title>
+
+<link rel="shortcut icon" type="image/icon" href="https://s3.amazonaws.com/www.crudform.com/favicon.ico">  
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
+
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+	rel="stylesheet" type="text/css">
+
+</head>
+
+<body style="">
+
+	<div class="container">
+
+		<div class="row" style="margin-top: 80px !important;">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6 p-3" style="border: 1px solid #ddd; border-radius: 10px;">
+				<form class="form" id="form-id">
+					<div class="mb-2 label"><strong>New Message, Type Here</strong></div>
+					<input id = "text" name = "message" type="text" class="form-control mb-2" placeholder="type message here" />
+					<input id = "name" name = "name" type="text" class="form-control mb-2" placeholder="name" />
+					<div id="sendMessage" class="btn btn-primary">Send Message</div>
+				</form>
+                
+                <br/>
+                
+                <div id="list">
+                </div>
+                
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+		
+		<div class="row" style="margin-top: 10px !important;">
+			<div class="col-lg-3"></div>		
+			<div class="col-lg-6">
+				<div class="btn btn-primary">Create S3 Folder</div>
+				<div class="btn btn-primary">Generate HTML File</div>
+				<div class="btn btn-primary">Upload File</div>
+			</div>		
+			<div class="col-lg-3"></div>		
+		</div>
+		
+
+		<div class="row">
+			<div class="col-lg-12 small"></div>
+		</div>
+
+	</div>
+</body>
+</html>
