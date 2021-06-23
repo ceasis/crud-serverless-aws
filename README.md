@@ -9,7 +9,7 @@ CRUD - means Create, Read, Update, Delete
 - CloudFront (points to API Gateway and S3 thru multiple origins (1 for API Gateway, 1 for S3), also you can make website HTTPS enabled with free SSL cert).
 - API Gateway (connects to Lambda, create Methods for POST, GET, DELETE)
 - Lambda (Java8, API endpoints for Create, Read, Delete. Check Java Code on how to interact with DynamoDB)
-- S3 (store HTML file)
+- [S3](https://s3.console.aws.amazon.com/) (store HTML file) 
 - DynamoDB (store data)
 
 ![image](https://user-images.githubusercontent.com/4587445/123011931-ec4e4c00-d3f3-11eb-9df3-8970de879024.png)
