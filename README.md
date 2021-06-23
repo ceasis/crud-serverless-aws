@@ -12,6 +12,8 @@ This project demonstrates how to create a fully working HTTPS website using AWS 
 
 ![image](https://user-images.githubusercontent.com/4587445/123011931-ec4e4c00-d3f3-11eb-9df3-8970de879024.png)
 
+AWS Diagram created using https://app.cloudcraft.co/
+
 Sample Page
 -----------
 
