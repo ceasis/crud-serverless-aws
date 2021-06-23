@@ -1,11 +1,14 @@
 Crud Serverless in AWS
 ======================
-- Route53
-- CloudFront
-- API Gateway
-- Lambda (Java8)
-- S3
-- DynamoDB
+
+This project demonstrates how to create a fully working HTTPS website using AWS serverless services. There are couple of configurations that needed to be done on each service. 
+
+- Route53 (register domain name, create A record to point to CloudFront)
+- CloudFront (points to API Gateway and S3 thru multiple origins (1 for API Gateway, 1 for S3), also you can make website HTTPS enabled with free SSL cert).
+- API Gateway (connects to Lambda, create Methods for POST, GET, DELETE)
+- Lambda (Java8, API endpoints for Create, Read, Delete. Check Java Code on how to interact with DynamoDB)
+- S3 (store HTML file)
+- DynamoDB (store data)
 
 ![image](https://user-images.githubusercontent.com/4587445/123011931-ec4e4c00-d3f3-11eb-9df3-8970de879024.png)
 
