@@ -1,5 +1,5 @@
-CRUD Serverless in AWS
-======================
+CRUD Web App using AWS Serverless
+=================================
 
 This project demonstrates how to create a fully working HTTPS website using AWS serverless services. There are couple of configurations that needed to be done on each service. 
 
