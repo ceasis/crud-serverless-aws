@@ -36,7 +36,11 @@ API Gateway
 
 ![image](https://user-images.githubusercontent.com/4587445/123014465-e5760800-d3f8-11eb-9d95-5033bedfdfc2.png)
 
+![image](https://user-images.githubusercontent.com/4587445/123017595-77810f00-d3ff-11eb-8274-06da05808d0f.png)
+
 Lambda (Java8)
 --------------
 
 ![image](https://user-images.githubusercontent.com/4587445/123014570-1ce4b480-d3f9-11eb-8a13-ca2dd884625b.png)
+
+
