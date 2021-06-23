@@ -19,6 +19,11 @@ AWS Diagram created using https://app.cloudcraft.co/
 Sample Page
 -----------
 
+**FRONTEND**
+- JQuery
+- Bootstrap 4
+- JSrender
+
 ![image](https://user-images.githubusercontent.com/4587445/123012513-f3298e80-d3f4-11eb-8de6-4dd2851cbd4e.png)
 
 Route53
@@ -54,5 +59,4 @@ DynamoDB
 
 ![image](https://user-images.githubusercontent.com/4587445/123017959-3b01e300-d400-11eb-905a-8aee8598f3d3.png)
 
-
-
+                                                                    
