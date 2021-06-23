@@ -1,7 +1,9 @@
-Crud Serverless in AWS
+CRUD Serverless in AWS
 ======================
 
 This project demonstrates how to create a fully working HTTPS website using AWS serverless services. There are couple of configurations that needed to be done on each service. 
+
+CRUD - means Create, Read, Update, Delete
 
 - Route53 (register domain name, create A record to point to CloudFront)
 - CloudFront (points to API Gateway and S3 thru multiple origins (1 for API Gateway, 1 for S3), also you can make website HTTPS enabled with free SSL cert).
