@@ -31,6 +31,12 @@ CloudFront
 
 ![image](https://user-images.githubusercontent.com/4587445/123012940-caee5f80-d3f5-11eb-8b35-e73e8ce27796.png)
 
+CloudFront already does the mapping for the /v1 (stage name) in API Gateway. Setting is in CloudFront -> Origin Settings -> Origin Path
+ex. 
+https://www.crudform.com/message <-- in CloudFront
+https://<api id>.execute-api.us-east-1.amazonaws.com/v1/message <-- in API Gateway
+
+
 API Gateway
 -----------
 
@@ -42,5 +48,11 @@ Lambda (Java8)
 --------------
 
 ![image](https://user-images.githubusercontent.com/4587445/123014570-1ce4b480-d3f9-11eb-8a13-ca2dd884625b.png)
+
+DynamoDB
+--------
+
+![image](https://user-images.githubusercontent.com/4587445/123017959-3b01e300-d400-11eb-905a-8aee8598f3d3.png)
+
 
 
