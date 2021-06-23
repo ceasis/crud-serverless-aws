@@ -5,12 +5,12 @@ This project demonstrates how to create a fully working HTTPS website using AWS 
 
 CRUD - means Create, Read, Update, Delete
 
-- Route53 (register domain name, create A record to point to CloudFront)
+- [Route53](https://console.aws.amazon.com/route53) (register domain name, create A record to point to CloudFront)
 - [CloudFront](https://console.aws.amazon.com/cloudfront) (points to API Gateway and S3 thru multiple origins (1 for API Gateway, 1 for S3), also you can make website HTTPS enabled with free SSL cert).
 - [API Gateway](https://console.aws.amazon.com/apigateway) (connects to Lambda, create Methods for POST, GET, DELETE)
 - [Lambda](https://console.aws.amazon.com/lambda) (Java8, API endpoints for Create, Read, Delete. Check Java Code on how to interact with DynamoDB)
 - [S3](https://s3.console.aws.amazon.com/) (store HTML file) 
-- DynamoDB (store data)
+- [DynamoDB](https://console.aws.amazon.com/dynamodb) (store data)
 
 ![image](https://user-images.githubusercontent.com/4587445/123011931-ec4e4c00-d3f3-11eb-9df3-8970de879024.png)
 
