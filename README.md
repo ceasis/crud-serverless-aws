@@ -12,7 +12,7 @@ CRUD - means Create, Read, Update, Delete
 - [S3](https://s3.console.aws.amazon.com/) (store HTML file) 
 - [DynamoDB](https://console.aws.amazon.com/dynamodb) (store data)
 
-![image](https://user-images.githubusercontent.com/4587445/123011931-ec4e4c00-d3f3-11eb-9df3-8970de879024.png)
+![image](https://user-images.githubusercontent.com/4587445/123320671-a664c580-d564-11eb-8c43-f82558697873.png)
 
 AWS Diagram created using https://app.cloudcraft.co/
 
